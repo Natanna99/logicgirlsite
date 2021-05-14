@@ -1,0 +1,37 @@
+<!doctype html>
+{% load static %}
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{% static 'imagens/lg.png' %}"/>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5b266e7995.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Logic Girl é um jogo mobile, que tem o intuito de ensinar logica de programação de forma divertida, e mostrar mulheres importantes da computação.">
+    <meta name="authors" content="Stefan Lucas, Douglas Aquino, Natanna Rocha">
+    <title>Logic Girl - {{nome}}</title>
+  </head>
+  <body class="bg alert-info">
+    <div id="navBar" name="{{nome}}">
+        <div class="container-fluid bg bg-success text-center">
+            <a class="btn" href="{% url 'home' %}"><img class="img-fluid" src="{% static 'imagens/logo.png' %}" alt="LOGIC GIRL"></a>
+            <h5 style="color: white;">Beta - 1.0</h5>
+            <div id="botoes">
+                <a class="btn alert-success fs-4 fw-bold" id="sugestaoBtn" href="{% url 'sugestao' %}"><i class="fas fa-box-tissue"> Sugestões</i></a>
+                <a class="btn alert-success fs-4 fw-bold" id="sobreBtn" href="{% url 'sobre' %}"><i class="fas fa-file-alt"> Sobre o jogo</i></a>
+                <a class="btn alert-success fs-4 fw-bold" id="downloadBtn" href="{% url 'downloads' %}"><i class="fas fa-arrow-circle-down"> Download</i></a>
+                <a class="btn alert-success fs-4 fw-bold" id="equipeBtn" href="{% url 'equipe' %}"><i class="fas fa-user-friends"> Equipe</i></a>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div class="fixed-bottom">
+      <img src="{% static 'imagens/sam2.png' %}" width="150px">
+    </div>
+    <script src="{% static 'js/controle.js' %}"><script/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>

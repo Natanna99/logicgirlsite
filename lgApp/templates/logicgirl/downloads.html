@@ -1,0 +1,50 @@
+{% extends 'logicgirl/base.html' %}
+
+{% block content %}
+    <center>
+        <div class="container">
+            <br>
+            <div class="card">
+                <div class="card-header bg alert-success fs-4 fw-bold">
+                    Todas as Versões do Jogo
+                </div>
+                <ul class="list-group list-group-flush">
+                    {% for v in versoes %}
+                        {% if v.se_e_pa  %}
+                            <div class="container bg alert-secondary border border-1 border-dark">
+                                <br>
+                                <div class="row text-center">
+                                    <div class="col">
+                                        <t class=" fs-5 fw-bold">{{v.nome}} - {{v.versao}}</t>
+                                        <li class="list-group-item">{{v.descricao}}</li>
+                                    </div>
+                                    <div class="col">
+                                        <br>
+                                        <a class="btn alert-success fs-4 fw-bold" href="{% url 'baixar' v.id %}"><i class="fas fa-arrow-circle-down"> Download</i></a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        {% else %}
+                            <div class="container border border-1 border-dark">
+                                <br>
+                                <div class="row">
+                                    <div class="col">
+                                        <t class=" fs-5 fw-bold">{{v.nome}} - {{v.versao}}</t>
+                                        <li class="list-group-item">{{v.descricao}}</li>
+                                    </div>
+                                    <div class="col">
+                                        <br>
+                                        <a class="btn alert-success fs-4 fw-bold" href="{% url 'baixar' v.id %}"><i class="fas fa-arrow-circle-down"> Download</i></a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+    </center>
+{% endblock %}

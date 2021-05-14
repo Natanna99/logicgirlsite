@@ -1,0 +1,55 @@
+{% extends 'logicgirl/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="container text-center">
+        <br><center>
+        <div class="card">
+            <div class="card-header bg alert-success">
+                <i class="fas fa-user-friends fs-2 fw-bold"> Equipe</i>
+            </div>
+            <ul class="list-group list-group-flush">
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col border border-1 border-dark">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'imagens/stefan.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Stefan Lucas</h5>
+                                    <p class="card-text">Desenvolvedor, Programador e Designer de Ambiente.</p>
+                                    <a class="btn alert-info" href="https://www.instagram.com/stefan.luks/"><i class="fab fa-instagram"></i> stefan.luks</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col border border-1 border-dark">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'imagens/natanna.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Natanna Rocha</h5>
+                                    <p class="card-text">Idealizadora, Desenvolvedora, Programadora e Character Designer.</p>
+                                    <a class="btn alert-info" href="https://www.instagram.com/asuka9990/"><i class="fab fa-instagram"></i> asuka9990</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col border border-1 border-dark">
+                            <div class="card" style="width: 18rem;">
+                                <img src="{% static 'imagens/douglas.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Douglas Aquino</h5>
+                                    <p class="card-text">Designer, Desenvolvedor e Programador</p>
+                                    <a class="btn alert-info" href="https://www.instagram.com/douglas_a_m/"><i class="fab fa-instagram"></i> douglas_a_m</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <br>
+            </ul>
+        </div>
+        <br><br>
+    </div>
+{% endblock %}
