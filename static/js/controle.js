@@ -9,7 +9,7 @@ if(nome == "sobre"){
     btn2.className = "btn alert-info fs-4 fw-bold";
 }else if(nome == "downloads"){
     btn3.className = "btn alert-info fs-4 fw-bold";
-}else if(nome == "sugestao"){
+}else if(nome == "avaliacao"){
     btn1.className = "btn alert-info fs-4 fw-bold";
 }else if(nome == "equipe"){
     btn4.className = "btn alert-info fs-4 fw-bold";

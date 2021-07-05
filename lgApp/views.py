@@ -6,7 +6,7 @@ def home(request):
     return render(request, 'logicgirl/sobre.html', {'nome':nome})
 
 def sugestao(request):
-    nome='sugestao'
+    nome='avaliacao'
     return render(request, 'logicgirl/sugestao.html', {'nome':nome})
     
 def reverter(lista):
